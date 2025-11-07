@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
 import { useState } from 'react'
-import Navbar from './Components/Navbar.jsx'
 import Home from './Pages/Home.jsx'
 import CarDetails from './Pages/CarDetails.jsx'
 import Navbar from './Components/Navbar.jsx'
+import Cars from './Pages/Cars.jsx'
 import './App.css'
 
 function App() {

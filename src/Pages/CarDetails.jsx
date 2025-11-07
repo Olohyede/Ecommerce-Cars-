@@ -24,3 +24,5 @@ function CarDetails(){
         </motion.div>
     );
 }
+
+export default CarDetails;
