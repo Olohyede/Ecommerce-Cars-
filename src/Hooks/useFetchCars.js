@@ -1,16 +1,33 @@
-import axios from 'axios';
-import { useState, useEffect, use } from 'react';
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function useFetchCars() {
-    const [cars, setCars] = useState([]);
+  const [cars, setCars] = useState([]);
 
-    useEffect(() => {
-        axios.get("https://carapi.app/api/models?limit=60")
-            .then(response => setCars(response.data.data))
-            .catch(error => console.log(error));
-    }, []);
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.allorigins.win/get?url=${encodeURIComponent(
+          "https://www.carqueryapi.com/api/0.3/?cmd=getModels&year=2015-2022&mode=json"
+        )}`
+      )
+      .then((response) => {
+        const json = JSON.parse(response.data.contents);
 
-    return cars;
+        if (Array.isArray(json.Models)) {
+          setCars(json.Models.slice(0, 60)); 
+          
+        } else {
+          setCars([]);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching cars:", error);
+        setCars([]);
+      });
+  }, []);
+
+  return cars;
 }
 
 export default useFetchCars;
