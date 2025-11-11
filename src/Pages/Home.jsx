@@ -4,15 +4,15 @@ import bgCar from "../assets/bg-car.jpg";
 
 function Home() {
   return (
-    // This section covers only the hero area (not the footer)
+
+
     <section
       className="h-[90vh] flex flex-col justify-center items-center text-center px-6 bg-cover bg-center relative"
       style={{ backgroundImage: `url(${bgCar})` }}
     >
-      {/* Semi-transparent dark overlay for readability */}
+
       <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Hero content (text + button) */}
       <div className="relative z-10 text-white">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
