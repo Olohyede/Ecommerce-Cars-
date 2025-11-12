@@ -44,6 +44,17 @@ function Navbar() {
           >
             Contact
           </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-600 font-medium"
+                : "text-gray-700 hover:text-blue-600"
+            }
+          >
+            About
+          </NavLink>
         </div>
       </div>
     </nav>
