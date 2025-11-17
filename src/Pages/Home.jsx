@@ -27,7 +27,7 @@ function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="mt-4 max-w-lg text-gray-200"
+          className="mt-4 max-w-lg mx-auto text-gray-200"
         >
           Browse a wide collection of cars from trusted brands. Discover features, compare models, and find the best deals all in one place.
         </motion.p>
